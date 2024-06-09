@@ -1,0 +1,26 @@
+.LogInbox{
+    width: 70%;
+    height: 400px;
+    background-color: #3b5e5f;
+    display: flex;
+    justify-content: center;
+    margin-left: 17%;
+    margin-top: 100px;
+    border-radius: 40px;
+}
+
+.LogInForm{
+    display: flex;
+    align-items: center;
+}
+
+.LogInForm input[type="text"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    height: 2rem;
+   
+  
+}
+
