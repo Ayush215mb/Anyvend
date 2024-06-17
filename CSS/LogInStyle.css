@@ -1,26 +1,70 @@
-.LogInbox{
+
+
+ .LogInbox {
     width: 70%;
+    max-width: 600px; 
     height: 400px;
     background-color: #3b5e5f;
     display: flex;
     justify-content: center;
-    margin-left: 17%;
-    margin-top: 100px;
+    margin: 100px auto 0; 
     border-radius: 40px;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.LogInForm{
+.Login-text {
+    color: white;
+    font-weight: bold;
+    font-size: 2rem; 
+    padding: 2rem 0; 
+    text-align: center; 
+}
+
+.LogInForm {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%; 
+    margin: 0 auto; 
 }
 
 .LogInForm input[type="text"] {
     padding: 0.5rem;
+    padding-inline: 1.5rem;
     border: none;
     border-radius: 10px;
-    margin-right: 0.5rem;
-    height: 2rem;
-   
-  
+    margin-bottom: 1rem; 
+    width: 100%; 
+    max-width: 300px; 
+    box-sizing: border-box;
 }
+
+.LogInForm button {
+    padding: 0.5rem 1.5rem; 
+    border: none;
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box; 
+}
+
+@media (max-width: 768px) {
+    .LogInbox {
+        width: 80%; 
+        margin-top: 80px;
+    }
+
+    .Login-text {
+        font-size: 1.5rem; 
+    }
+
+    .LogInForm {
+        width: 90%; 
+    }
+}
+
 
