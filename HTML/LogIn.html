@@ -6,6 +6,14 @@
     <title>LogIn</title>
     <link rel="stylesheet" href="../CSS/Homestyle.css">
     <link rel="stylesheet" href="../CSS/LogInStyle.css">
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+
+    <!-- Add the Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
 </head>
 <body>
     <div class="LogInContainer">
@@ -24,7 +32,7 @@
             </form>
             
             <nav class="nav-list">
-                <li> <a href="./LogIn.html" >Login</a></li>
+                <li> <a href="./SignUp.html" >Sign Up</a></li>
                 <li> <a href="#" >Cart</a></li>
                 <li> <a href="#" > About us</a></li>
             </nav>
@@ -32,9 +40,12 @@
 
         <div class="LogInbox">
             
-                <form class="LogInForm">
-                    <input type="text" placeholder="Enter Your Email Address">
-                    
+                <form class="LogInForm" id="LogInForm">
+                    <span class="Login-text">Log in</span>
+                    <input type="text" placeholder="Enter Your Email Address" required  id="email" >
+                    <input type="text" placeholder="Enter Your Password" required  id="password">
+                    <button type="submit" id="submit" >submit</button>
+                    <!-- <span class="signup-text" ><a href="./SignUp.html" >Click here to Sign Up</a></span> -->
                 </form>
             
         </div>
