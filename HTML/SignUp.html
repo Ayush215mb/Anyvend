@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="../CSS/Homestyle.css">
+    <link rel="stylesheet" href="../CSS/LogInStyle.css">
+    <link rel="stylesheet" href="../CSS/SignUpStyle.css">
+
+   
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+
+    <!-- Add the Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+
+
+
+   
+</head>
+<body>
+    <div class="SignUpContainer">
+        <div class="navbar">
+            
+            <div class="brandname"> 
+                <a href="../index.html">
+                    <img src="../assests/Images/Logo.jpg" class="logo" alt="logo"/>
+                </a>
+               
+                Anyvend
+            </div>
+            <form class="search-box">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+            
+            <nav class="nav-list">
+                <li> <a href="./LogIn.html" >Login</a></li>
+                <li> <a href="#" >Cart</a></li>
+                <li> <a href="#" > About us</a></li>
+            </nav>
+        </div>
+
+        <div class="SignUpbox">
+            
+                <form class="SignUpForm" id="SignUpForm">
+                    <span class="Login-text">Sign Up</span>
+                    <input type="text" placeholder="Enter Your Full Name" required id="name" >
+                    <input type="text" placeholder="Enter Your Email Address" required id="email" >
+                    <input type="text" placeholder="Enter Your Password" required id="password">
+                    <button type="submit"  id="submit">submit</button>
+                    <!-- <span class="signup-text" ><a href="#" >Click here to LogIn</a></span> -->
+                </form>
+            
+        </div>
+    </div>
+    
+    <Script src="../JS/SignUp.js" type="module"></Script>
+
+</body>
+</html>
