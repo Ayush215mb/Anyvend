@@ -1,0 +1,66 @@
+
+.SignUpbox {
+    width: 70%;
+    max-width: 600px; /* Set maximum width for better control */
+    height: 500px;
+    background-color: #3b5e5f;
+    display: flex;
+    justify-content: center;
+    margin: 60px auto; /* Center the box horizontally and adjust margin for spacing */
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.Login-text, .SignUp-text {
+    color: white;
+    font-weight: bold;
+    font-size: 2rem; /* Adjust font size for consistency */
+    padding: 3rem 0; /* Uniform padding for better spacing */
+    text-align: center; /* Center align the text */
+}
+
+.SignUpForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%; /* Adjust form width relative to parent for responsiveness */
+    margin: 0 auto; /* Center the form within the box */
+}
+
+.SignUpForm input[type="text"] {
+    padding: 0.5rem;
+    padding-inline: 1.5rem; /* Adjust padding for inputs */
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1rem; /* Adjust margin for spacing between inputs */
+    width: 100%; /* Make inputs full-width within the form */
+    max-width: 300px; /* Set a maximum width for better control on larger screens */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.SignUpForm button {
+    padding: 0.5rem 1.5rem; /* Adjust button padding */
+    border: none;
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 100%; /* Make button full-width within the form */
+    max-width: 300px; /* Set a maximum width for better control on larger screens */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+@media (max-width: 768px) {
+    .SignUpbox {
+        width: 80%; /* Adjust width for smaller screens */
+        margin-top: 40px; /* Reduce top margin for smaller screens */
+    }
+
+    .Login-text, .SignUp-text {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .SignUpForm {
+        width: 90%; /* Adjust form width for smaller screens */
+    }
+}
