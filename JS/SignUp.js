@@ -14,28 +14,27 @@ import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/fireb
     measurementId: ""
   };
 
-    // Initialize Firebase
+
     const app = initializeApp(firebaseConfig);
 
-    // Initialize Firebase Authentication,Database,Firestore
+
     const auth = getAuth(app);
     const database = getDatabase(app);
     const firestore = getFirestore(app);
 
-    // Function to Sign up new users
+
     const signup = async (name, email, password) => {
       try {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
         console.log('User signed up:', user);
-    
-        // Saving additional user information to Realtime Database
+
         await set(ref(database, 'users/' + user.uid), {
           username: name,
           email: email,
         });
     
-        // Saving additional user information to Firestore
+
         await setDoc(doc(firestore, 'users', user.uid), {
           username: name,
           email: email,
