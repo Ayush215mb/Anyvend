@@ -24,18 +24,31 @@ import { getFirestore, doc,addDoc,collection, setDoc, getDoc } from "https://www
     const firestore = getFirestore(app);
 
 
-    const saveData = async (user,productname,price, quantity, Dimensions) => 
+    const saveData = async (user,productname,price, quantity, Dimensions,imageurl) => 
     {
         try{
+
+          
         const ProductRef = push(ref(database, 'products/' + user.uid));
         await set(ProductRef, {
             productname: productname,
             price: price,
             quantity: quantity,
-            Dimensions: Dimensions
+            Dimensions: Dimensions,
+            imageurl: imageurl
+            
         });
+        console.log('User data saved to Realtime Database');
 
-          console.log('User data saved to Realtime Database and Firestore');
+          
+        await setDoc(doc(firestore, 'products',productname), {
+            productname: productname,
+            price: price,
+            quantity: quantity,
+            Dimensions: Dimensions,
+            imageurl: imageurl
+        });
+          console.log('User data saved to Firestore');
         }catch (error) {
             console.error('Error during saving', error.code, error.message);
           }
@@ -52,12 +65,13 @@ import { getFirestore, doc,addDoc,collection, setDoc, getDoc } from "https://www
           const price = document.getElementById('price').value;
           const quantity = document.getElementById('quantity').value;
           const dimensions = document.getElementById('Dimensions').value;
+          const imageurl = document.getElementById('imageurl').value;
     
-          console.log(productname, price, quantity, dimensions); 
+          console.log(productname, price, quantity, dimensions,imageurl); 
     
           onAuthStateChanged(auth, (user) => {
             if (allowedAdminUIDs.includes(user.uid)) {
-              saveData(user, productname, price, quantity, dimensions);
+              saveData(user, productname, price, quantity, dimensions,imageurl);
             } else {
               console.error('user is not allowed to make chnages');
             }
@@ -65,9 +79,11 @@ import { getFirestore, doc,addDoc,collection, setDoc, getDoc } from "https://www
         });
       }
 
-             const allowedAdminUIDs = ['', '']; 
 
 
+             const allowedAdminUIDs = ['', '','']; 
+
+  
              const checkAdminAccess = (user) => {
                const adminLink = document.getElementById('admin-link');
                if (allowedAdminUIDs.includes(user.uid)) {
@@ -81,11 +97,10 @@ import { getFirestore, doc,addDoc,collection, setDoc, getDoc } from "https://www
       if (adminLink) {
         onAuthStateChanged(auth, (user) => {
           if (user) {
-            checkAdminAccess(user); 
+            checkAdminAccess(user);
           } else {
-            adminLink.style.display = 'none';
+            adminLink.style.display = 'none'; 
           }
         });
       }
     });
-
