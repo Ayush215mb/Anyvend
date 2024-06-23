@@ -23,6 +23,7 @@ import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/fireb
     const firestore = getFirestore(app);
 
 
+
     setPersistence(auth, browserLocalPersistence)
       .then(() => {
       
@@ -65,15 +66,15 @@ import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/fireb
       };
 
 
-    
+   
         const allowedAdminUIDs = ['', '','']; 
 
 
- 
+
       const checkAdminAccess = (user) => {
         const adminLink = document.getElementById('admin-link');
         if (allowedAdminUIDs.includes(user.uid)) {
-          adminLink.style.display = 'block';
+          adminLink.style.display = 'block'; 
         } else {
           adminLink.style.display = 'none'; 
         }
@@ -92,7 +93,6 @@ import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/fireb
   });
 
 
-   
    onAuthStateChanged(auth, (user) => {
     if (user) {
       checkAdminAccess(user);
