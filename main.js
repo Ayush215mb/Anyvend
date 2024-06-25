@@ -16,23 +16,95 @@ const db = firebase.firestore();
 
 
 
-db.collection("products").get().then((querySnapshot) => {
+firebase.initializeApp(firebaseConfig);
+const firestore = firebase.firestore();
+
+var inpqty = 1;
+
+const arr=[];
+
+firestore.collection("products").get().then((querySnapshot) => {
   querySnapshot.forEach((doc) => {
+
+
       var data = doc.data();
+
+      var productId = doc.id;
+      var decrementId = `decrement-${productId}`;
+      var incrementId = `increment-${productId}`;
+      var qtyId = `qty-${productId}`;
+      var buyBtnId = `buybtn-${productId}`;
+
+      arr.push({data:data,buyBtnId:buyBtnId});
+      
       var product = document.createElement('div');
       product.className = 'card';
       product.innerHTML = `
-          <img src="${data.imageurl}" alt="${data.name}">
-          <h2>${data.name}</h2>
+          <img src="${data.imageurl}" alt="${data.productname}">
+          <h2>${data.productname}</h2>
+          <span id="inpqty"> Qty: ${inpqty}</span>
           <p>Price: ${data.price}</p>
-          <button onclick="updatePosition('${data.position}')">Buy Now</button>
+          <button  class="cartbtn" id="cartbtn-${productId}">Add to Cart</button>
+          <button class="buybtn" id="buyBtnId">Buy Now</button>
       `;
+      console.log("hello")
       document.getElementById('products').appendChild(product);
+
+
   });
+
 });
 
-function updatePosition(position) {
-  firebase.database().ref('Position').set({
-      position: position
-  });
-}
+
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        arr.forEach(element=>{
+            document.getElementById(element.buyBtnId).addEventListener('click', (event) => {
+ 
+                event.preventDefault();
+                console.log("hello")
+          
+                  console.log(element.data,element.data.productname);
+       
+              });
+         })
+    
+     
+    }, 5000);
+   });
+
+
+
+
+
+document.getElementById('searchButton').addEventListener('click', function(e) {
+    e.preventDefault(); 
+
+    const searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
+
+    
+    const productContainer = document.getElementById('products');
+    productContainer.innerHTML = '';
+
+    firestore.collection("products").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            var data = doc.data();
+            
+            if (data.productname.toLowerCase().includes(searchQuery)) {
+                var product = document.createElement('div');
+                product.className = 'card';
+                product.innerHTML = `
+                     <img src="${data.imageurl}" alt="${data.productname}">
+                    <h2>${data.productname}</h2>
+                    <span id="inpqty"> Qty: ${inpqty}</span>
+                    <p>Price: ${data.price}</p>
+                    <button id="cartbtn">Add to Cart</button>
+                    <button id="buybtn">Buy Now</button>
+                `;
+                productContainer.appendChild(product);
+            }
+        });
+    });
+});
+
+
