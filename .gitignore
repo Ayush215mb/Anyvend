@@ -1,18 +1,26 @@
-# Node modules
-node_modules/
-#jS file
-JS/
-
-# Build output
-build/
-
-# Environment variables
-.env
-
-# Log files
+# Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# OS-specific files
+node_modules
+dist
+dist-ssr
+*.local
+
+JS
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
