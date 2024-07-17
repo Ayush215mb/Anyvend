@@ -1,0 +1,66 @@
+/* .Profile-box{
+    margin-block: 3rem;
+    margin-inline: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.Profile-box button{
+   padding:1rem;
+
+} */
+
+
+ .Profile-box {
+   display: flex;
+   justify-content: center;
+} 
+
+
+.user-data{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.info{
+    max-width: 30rem;
+    margin: 7rem auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 15px rgb(61, 59, 59);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+.info span {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    margin-block: 10px;
+}
+
+/* .info h1{
+    text-align: center;
+} */
+
+#logout-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+   
+   
+}
+
+#logout-button:hover {
+    background-color: #0056b3;
+}

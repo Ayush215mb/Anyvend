@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../CSS/CartStyle.css" />
+
+    <link rel="icon" type="image/png" href="../assests/Images/Logo.jpg" />
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+
+    <!-- Add the Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <div class="CartContainer">
+      <div class="navbar">
+        <div class="brandname">
+          <a href="../index.html">
+            <img src="../assests/Images/Logo.jpg" class="logo" alt="logo" />
+          </a>
+
+          Anyvend
+        </div>
+        <form class="search-box">
+          <input type="text" placeholder="Search..." />
+          <button type="submit">Search</button>
+        </form>
+
+        <nav class="nav-list">
+          <li><a href="./Admin.html" id="admin-link">Admin</a></li>
+          <li><a href="./LogIn.html" id="sign-up-link">Log In</a></li>
+          <li><a href="./Cart.html">Cart</a></li>
+          <li><a href="#"> About us</a></li>
+        </nav>
+      </div>
+
+      <div class="cart-container">
+        <h1>Your Cart</h1>
+        <div id="cart-items">
+          <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div id="cart-summary">
+          <h2>Total: <span id="total-price">0.00</span></h2>
+          <button id="dispense-btn">Dispense Now</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../JS/Cart_nav_Profile.js" type="module"></script>
+    <script src="../JS/Cart-prod.js" type="module"></script>
+    <script src="../JS/Dispense-btn.js" type="module"></script>
+  </body>
+</html>

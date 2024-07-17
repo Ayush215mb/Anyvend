@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../CSS/AdminStyle.css" />
+
+    <link rel="icon" type="image/png" href="../assests/Images/Logo.jpg" />
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+
+    <!-- Add the Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js"></script>
+  </head>
+  <body>
+    <div class="LogInContainer">
+      <div class="navbar">
+        <div class="brandname">
+          <a href="../index.html">
+            <img src="../assests/Images/Logo.jpg" class="logo" alt="logo" />
+          </a>
+
+          Anyvend
+        </div>
+
+        <form class="search-box">
+          <input type="text" placeholder="Search..." />
+          <button type="submit">Search</button>
+        </form>
+
+        <nav class="nav-list">
+          <li><a id="admin-link">Admin</a></li>
+          <li><a href="./LogIn.html" id="sign-up-link">Log In</a></li>
+          <li><a href="./Cart.html">Cart</a></li>
+          <li><a href="#"> About us</a></li>
+        </nav>
+      </div>
+
+      <div class="Adminbox">
+        <h3>Add product details</h3>
+        <form class="product-info" id="product-info">
+          <div class="form-row">
+            <input type="text" id="name" placeholder="Enter the product name" />
+            <input type="text" id="imageurl" placeholder="Enter Image URL" />
+          </div>
+          <div class="form-row">
+            <input type="file" id="imageUpload" accept="image/*" />
+            <input type="text" id="price" placeholder="Enter the price" />
+          </div>
+          <div class="form-row">
+            <input type="text" id="quantity" placeholder="Enter the quantity" />
+            <input
+              type="text"
+              id="length"
+              placeholder="Enter the Length in cm"
+            />
+          </div>
+          <div class="form-row">
+            <input
+              type="text"
+              id="breadth"
+              placeholder="Enter the Breadth in cm"
+            />
+            <input type="text" id="depth" placeholder="Enter the Depth in cm" />
+          </div>
+          <!-- <div class="form-row">
+            <input
+              type="number"
+              id="position"
+              placeholder="Enter the Position"
+            />
+          </div> -->
+          <div class="form-row">
+            <button id="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <table id="product-table">
+          <caption>
+            Stocks Data
+          </caption>
+          <thead>
+            <tr>
+              <th colspan="8" id="Belt-Length">Available length</th>
+            </tr>
+            <tr>
+              <th>SL no.</th>
+              <th>Product Name</th>
+              <!-- <th>Quantity</th> -->
+              <th>Dimensions (L x B x H)(cm)</th>
+              <th>Price</th>
+              <th>Image URL</th>
+              <th>Position</th>
+              <th>Dispense Position(cm)</th>
+              <th>Door Position(cm)</th>
+              <th>Remove Button</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="../JS/Product-info.js" type="module"></script>
+    <script src="../JS/Admin-access.js" type="module"></script>
+  </body>
+</html>

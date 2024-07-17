@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anyvend</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="icon" type="image/png" href="./assests/Images/Logo.jpg">
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+
+
+</head>
+
+<body>
+    <div class="homecontainer">
+        <div class="navbar">
+            
+            <div class="brandname"> 
+                <a href="index.html">
+                    <img src="./assests/Images/Logo.jpg" class="logo" alt="logo"/>
+                </a>
+            
+                Anyvend
+            </div>
+            <form class="search-box" id="searchContainer">
+                <input type="text" placeholder="Search..." id="searchInput">
+                <button type="submit" id="searchButton" >Search</button>
+            </form>
+            
+            <nav class="nav-list">
+                <li><a href="./HTML/Admin.html" id="admin-link" >Admin</a></li>
+                <li> <a href="./HTML/LogIn.html" id="sign-up-link" class="active">Login</a></li>
+                <li> <a href="./HTML/Cart.html" >Cart</a></li>
+                <li> <a href="#" > About us</a></li>
+            </nav>
+        </div>
+
+        <div class="prodcontainer">
+            
+            <div id="products">  
+
+            </div>
+
+        </div>
+          
+        
+    </div>
+
+
+
+
+    <script src="./JS/Search_Button.js" type="module"></script>
+    <script src="./main.js" type="module" ></script>
+    <script src="./JS/LogIn.js" type="module"></script>
+
+</body>
+</html>
+
+
+
+

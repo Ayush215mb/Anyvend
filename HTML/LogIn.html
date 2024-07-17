@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogIn</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../CSS/LogInStyle.css" />
+
+    <link rel="icon" type="image/png" href="../assests/Images/Logo.jpg" />
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+
+    <!-- Add the Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <div class="LogInContainer">
+      <div class="navbar">
+        <div class="brandname">
+          <a href="../index.html">
+            <img src="../assests/Images/Logo.jpg" class="logo" alt="logo" />
+          </a>
+
+          Anyvend
+        </div>
+        <form class="search-box">
+          <input type="text" placeholder="Search..." />
+          <button type="submit">Search</button>
+        </form>
+
+        <nav class="nav-list">
+          <li><a href="./Admin.html" id="admin-link">Admin</a></li>
+          <li><a href="./SignUp.html" id="sign-up-link">Sign Up</a></li>
+          <li><a href="./Cart.html">Cart</a></li>
+          <li><a href="#"> About us</a></li>
+        </nav>
+      </div>
+
+      <div class="LogInbox">
+        <form class="LogInForm" id="LogInForm">
+          <span class="Login-text">Log in</span>
+          <input
+            type="email"
+            placeholder="Enter Your Email Address"
+            required
+            id="email"
+          />
+          <input
+            type="password"
+            placeholder="Enter Your Password"
+            required
+            id="password"
+          />
+          <button type="submit" id="submit">submit</button>
+
+          <button id="googleSignInBtn">
+            <img
+              src="https://developers.google.com/identity/images/g-logo.png"
+              alt="Google logo"
+            />
+            Sign in with Google
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../JS/LogIn.js" type="module"></script>
+    <script src="../JS/SignInWithGoogle.js" type="module"></script>
+  </body>
+</html>

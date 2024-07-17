@@ -1,0 +1,83 @@
+
+
+ .LogInbox {
+    width: 70%;
+    max-width: 600px; 
+    height: 400px;
+    background-color: #3b5e5f;
+    display: flex;
+    justify-content: center;
+    margin: 100px auto 0; 
+    border-radius: 40px;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0 10px rgb(61, 59, 59);
+}
+
+.Login-text {
+    color: white;
+    font-weight: bold;
+    font-size: 2rem; /* Adjust font size using rem for better responsiveness */
+    padding: 2rem 0; /* Uniform padding for better spacing */
+    text-align: center; /* Center align the text */
+}
+
+.LogInForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%; /* Adjust form width relative to parent for responsiveness */
+    margin: 0 auto; /* Center the form within the login box */
+}
+
+.LogInForm input {
+    padding: 0.5rem;
+    padding-inline: 1.5rem; 
+    color:black;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1rem; 
+    width: 100%; 
+    max-width: 300px; 
+    box-sizing: border-box; 
+}
+
+.LogInForm button {
+    padding: 0.5rem 1.5rem; 
+    border: none;
+    font-size: 1rem;
+    border-radius: 5rem;
+    background-color: #fff;
+    cursor: pointer;
+    width: 100%; 
+    max-width: 300px; 
+    box-sizing: border-box; 
+}
+
+#googleSignInBtn{
+   margin-block: 1rem;
+  
+}
+#googleSignInBtn img{
+    width:1.3rem;
+    height:1.3rem; 
+    margin-right:1rem;
+    vertical-align: middle;
+ }
+
+
+@media (max-width: 768px) {
+    .LogInbox {
+        width: 80%; /* Adjust width for smaller screens */
+        margin-top: 80px; /* Reduce top margin for smaller screens */
+    }
+
+    .Login-text {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .LogInForm {
+        width: 90%; /* Adjust form width for smaller screens */
+    }
+}
+

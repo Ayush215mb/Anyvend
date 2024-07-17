@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../CSS/LogInStyle.css" />
+    <link rel="stylesheet" href="../CSS/SignUpStyle.css" />
+
+    <link rel="icon" type="image/png" href="../assests/Images/Logo.jpg" />
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+
+    <!-- Add the Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <div class="SignUpContainer">
+      <div class="navbar">
+        <div class="brandname">
+          <a href="../index.html">
+            <img src="../assests/Images/Logo.jpg" class="logo" alt="logo" />
+          </a>
+
+          Anyvend
+        </div>
+        <form class="search-box">
+          <input type="text" placeholder="Search..." />
+          <button type="submit">Search</button>
+        </form>
+
+        <nav class="nav-list">
+          <li><a href="Admin.html" id="admin-link">Admin</a></li>
+          <li><a href="./LogIn.html" id="sign-up-link">Login</a></li>
+          <li><a href="./Cart.html">Cart</a></li>
+          <li><a href="#"> About us</a></li>
+        </nav>
+      </div>
+
+      <div class="SignUpbox">
+        <form class="SignUpForm" id="SignUpForm">
+          <span class="Login-text">Sign Up</span>
+          <input
+            type="text"
+            placeholder="Enter Your Full Name"
+            required
+            id="name"
+          />
+          <input
+            type="email"
+            placeholder="Enter Your Email Address"
+            required
+            id="email"
+          />
+          <input
+            type="number"
+            placeholder="Enter Your Phone Number"
+            required
+            id="phone"
+          />
+          <input
+            type="password"
+            placeholder="Enter Your Password"
+            required
+            id="password"
+          />
+          <button type="submit" id="submit">submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../JS/SignUp.js" type="module"></script>
+    <script src="../JS/LogIn.js" type="module"></script>
+  </body>
+</html>
