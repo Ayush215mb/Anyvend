@@ -12,7 +12,10 @@ dist
 dist-ssr
 *.local
 
-JS
+JS/
+
+previous_versions/
+
 
 # Editor directories and files
 .vscode/*
