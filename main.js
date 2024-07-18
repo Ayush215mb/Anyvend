@@ -20,14 +20,7 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAWwgPVB4DvIRyLYU4vrL2MMotRR1O49mE",
-  authDomain: "avt1-9a0bb.firebaseapp.com",
-  databaseURL: "https://avt1-9a0bb-default-rtdb.firebaseio.com",
-  projectId: "avt1-9a0bb",
-  storageBucket: "avt1-9a0bb.appspot.com",
-  messagingSenderId: "43172678025",
-  appId: "1:43172678025:web:181a51f9c817ca143af958",
-  measurementId: "G-GPWBHF1JFG",
+  
 };
 
 // Initialize Firebase
